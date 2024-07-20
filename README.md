@@ -1,15 +1,21 @@
 # Culqi Frontend Technical Test
 
-## Para crear el build del proyecto
+## Para crear el build.
 
 -- npm run build
 
-## Para ejecutar el proyecto en local
+## Para ejecutar en local.
 
 -- npm run preview
-### Link alojado en Vercel
+
+## Para ejecutar el test.
+
+-- npm run test
+
+### Link alojado en Vercel.
 
 [technical-test](https://culqi-frontend-technical-test.vercel.app/)
 
-### Link alojado en Netlify
+### Link alojado en Netlify.
+
 [technical-test](https://culqi-frontend-technical-test.netlify.app/)

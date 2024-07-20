@@ -1,5 +1,3 @@
-// src/services/api.service.ts
-
 import axios, { AxiosInstance } from 'axios';
 import {
 	ApiResponse,

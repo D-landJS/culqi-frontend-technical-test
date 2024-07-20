@@ -32,8 +32,8 @@
 </template>
 
 <script setup lang="ts">
-import CharacterFilter from '../components/form/CharacterFilter.vue';
-import CharacterList from '../components/form/CharacterList.vue';
+import CharacterFilter from '../components/character/CharacterFilter.vue';
+import CharacterList from '../components/character/CharacterList.vue';
 import LoadingSpinner from '../components/shared/LoadingSpinner.vue';
 import ErrorDisplay from '../components/shared/ErrorDisplay.vue';
 import Pagination from '../components/shared/Pagination.vue';

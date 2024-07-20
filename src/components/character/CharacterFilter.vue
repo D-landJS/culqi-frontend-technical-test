@@ -5,14 +5,14 @@
 			placeholder="Find a character"
 			@input="handleInput"
 		/>
-		<StatusSelect v-model="selectedStatus" @update:modelValue="handleInput" />
+		<Select v-model="selectedStatus" @update:modelValue="handleInput" />
 	</div>
 </template>
 
 <script setup lang="ts">
-import { defineEmits, defineProps, ref, watch } from 'vue';
-import Input from '../form/Input.vue';
-import StatusSelect from '../form/StatusSelect.vue';
+import { ref, watch } from 'vue';
+import Input from '../shared/Input.vue';
+import Select from '../shared/Select.vue';
 
 const props = defineProps<{
 	modelValue: {
