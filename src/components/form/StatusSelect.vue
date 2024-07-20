@@ -1,6 +1,6 @@
 <template>
 	<div class="flex justify-center items-center">
-		<select v-model="selectedStatus" @change="handleChange" class="select">
+		<select v-model="localSelectedStatus" class="select">
 			<option
 				v-for="status in statusOption"
 				:key="status.value"
@@ -13,23 +13,16 @@
 </template>
 
 <script setup lang="ts">
-import { defineEmits, defineProps } from 'vue';
+import { computed, defineProps, defineEmits } from 'vue';
 import { statusOptions, StatusOption } from '../../constants/statusOptions';
 
-const props = defineProps<{
-	modelValue: string;
-}>();
+const props = defineProps<{ modelValue: string }>();
+const emit = defineEmits<{ (e: 'update:modelValue', value: string): void }>();
 
-const emit = defineEmits<{
-	(e: 'update:modelValue', value: string): void;
-}>();
-
-const selectedStatus = props.modelValue;
-
-const handleChange = (event: Event) => {
-	const target = event.target as HTMLSelectElement;
-	emit('update:modelValue', target.value);
-};
+const localSelectedStatus = computed({
+	get: () => props.modelValue,
+	set: value => emit('update:modelValue', value),
+});
 
 const statusOption: StatusOption[] = statusOptions;
 </script>
